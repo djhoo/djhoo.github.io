@@ -3,30 +3,29 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: nodejs express mongodb | Hexo</title>
+  <title>Tag: nodejs express mongodb | 后德君</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/tags/nodejs-express-mongodb/">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="后德君">
+<meta property="og:url" content="http://yoursite.com/tags/nodejs-express-mongodb/index.html">
+<meta property="og:site_name" content="后德君">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description">
-
+<meta name="twitter:title" content="后德君">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="后德君" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
-  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
-
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
   
 
 </head>
+
 <body>
   <div id="container">
     <div id="wrap">
@@ -35,7 +34,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">后德君</a>
       </h1>
       
     </div>
@@ -55,7 +54,7 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://yoursite.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
       </div>
     </div>
   </div>
@@ -63,158 +62,60 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post--nodejs随笔" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/07/08/-nodejs随笔/" class="article-date">
-  <time datetime="2018-07-08T14:46:47.000Z" itemprop="datePublished">Jul 8 2018</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2018/07/08/-nodejs随笔/" class="archive-article-date">
+  <time datetime="2018-07-08T14:46:47.000Z" itemprop="datePublished">Jul 8</time>
 </a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+      
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/08/-nodejs随笔/">nodejs随笔</a>
+      <a class="archive-article-title" href="/2018/07/08/-nodejs随笔/">nodejs随笔</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>一,安装express的时候出现以下问题<br>解决方法：<br>1.通过config命令<br>$ npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a><br>$ npm info underscore （如果上面配置正确这个命令会有字符串response）<br>•    1<br>•    2<br>2.命令行指定<br>$ npm —registry <a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a> info underscore<br>•    1<br>3.编辑 ~/.npmrc 加入下面内容<br>$ registry = <a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a></p>
-<p><a href="http://blog.csdn.net/yypsober/article/details/51906616" target="_blank" rel="external">http://blog.csdn.net/yypsober/article/details/51906616</a></p>
-<p>二，express 安装环境变量<br>现在已经有express<br>express命令安装在全局才起作用!<br>所以express安装的时候要用 npm install express -g<br>键入:express myapp (myapp是随意起的工程名称)<br>你会发现多了一个 C:\Program Files\nodejs\myapp 目录<br>默认情况下：里会自动创建</p>
-<p>这几个文件，不做解释，相信有过开发经验的同学都能一眼明了。<br>复制node_modules到myapp下面</p>
-<p>设置环境变量<br>、进入环境变量对话框，在系统变量下新建”NODE_PATH”，输入”d:\node\ node_modules“。（ps：这一步相当关键。）<br>2014.4.19新增：由于改变了module的默认地址，所以上面的用户变量都要跟着改变一下（用户变量”PATH”修改为“d:\node\”）</p>
-<p>安装express</p>
-<ol>
-<li></li>
-<li><p>在命令行中执行 “npm install -g express”等待下载并且自动完成安装。测试express完成安装的一个方法就是查看其版本号，执行命令 “express -V”正常情况下回输出版本号如图，但有遇到不正常情况的，会提示“express不是内部或外部命令”，这样问题就来了，这是什么原因呢？</p>
-</li>
-<li><p>5<br>有两种可能：①在第二步安装node是没有添加环境变量，这种情况把node添加的环境变量即可解决。②express 4.x版本中将命令工具分出来了，需要再安装一个命令工具，执行命令“npm install -g express-generator”完成后再测试就可以了。</p>
-</li>
-</ol>
-<p>三，    创建工程<br>1，express nohare</p>
-<p>2,打开package.json文件，右面添加下面红字内容，注意红字前一项的最后要加逗号，<br> “dependencies”: {<br>    “body-parser”: “~1.17.1”,<br>    “cookie-parser”: “~1.4.3”,<br>    “debug”: “~2.6.3”,<br>    “express”: “~4.15.2”,<br>    “jade”: “~1.11.0”,<br>    “morgan”: “~1.8.1”,<br>    “serve-favicon”: “~2.4.2”,<br>    “mongodb”: “<em>“,<br>    “monk”: “</em>“</p>
-<p>四，mongod操做</p>
-<p>下载mongoDB，然后在环境变量里面把path加上mongoDB的bin的path</p>
-<p>1,在F:\nodejs\nohare目录下面启动npm start<br>DB连接并且启动服务：mongod -dbpath  F:\nodejs\nohare\data<br>在浏览器里面打开 <a href="http://localhost:3000/helloworld" target="_blank" rel="external">http://localhost:3000/helloworld</a></p>
-<p>use admin<br>db.createUser(<br>  {<br>    user: “userAdmin”, //用户名<br>    pwd: “123”, //密码<br>    roles: [ { role: “userAdminAnyDatabase”, db: “admin” } ] //权限<br>  }<br>)</p>
-<p>use yesdb<br>db.createUser(<br>  {<br>    user: “admin”, //用户名<br>    pwd: “123456”, //密码<br>    roles: [ { role: “userAdminAnyDatabase”, db: “ yesdb “ } ] //权限<br>  }<br>)</p>
-<p> Mongod –auth –dbpath data</p>
-<p>use yesdb<br>db.createUser(<br>  {<br>    user: “tester”,<br>    pwd: “123”,<br>    roles: [ { role: “readWrite”, db: “yesdb” },<br>             { role: “read”, db: “reporting” } ]<br>  }<br>)</p>
-<p>2，mongoDb的可视化工具：<a href="https://robomongo.org/download" target="_blank" rel="external">https://robomongo.org/download</a><br>使用方法：<a href="http://www.jianshu.com/p/1a2032cfa13d" target="_blank" rel="external">http://www.jianshu.com/p/1a2032cfa13d</a></p>
-<p>insertDocument:<br>{<br>    “_id” : ObjectId(“5202b481d2184d390cbf6eca”),<br>    “username” : “testuser1”,<br>    “email” : “testuser1@testdomain.com”<br>}</p>
-<p>res.render(‘salescontract’,<br>render后面的是对应的ejs的文件名称。</p>
-<p>传参数获取参数值<br>req.query.id</p>
-<p>3，db查找<br>db.users.find({}, {‘name’ : 1, ‘skills’ : 1});<br>说明： 第一个{} 放where条件 第二个{} 指定那些列显示和不显示 （0表示不显示 1表示显示)</p>
-<p>重定向的时候，加上参数变量，下面id就是变量<br>res.redirect(“contractdetail?id=”+id);</p>
-<p>res.send没有貌似return效果，如果不想继续执行的话，需要后面加上return；</p>
-<p>五，一些方法<br>查询非阻塞的例子</p>
-<h2 id="下面查找到以后，要进行计算以后再更新，，因为查找是非租塞的，所以更新必须放在查找的结果里面做，否则，更新前的计算总是不正确。">下面查找到以后，要进行计算以后再更新，，因为查找是非租塞的，所以更新必须放在查找的结果里面做，否则，更新前的计算总是不正确。</h2>
-<p>sales.find({“ctrctId” : id},{},function(e,docs){<br>        gathertotalvalue = parseInt(docs[0].gathertotalvalue);<br>        gathertotalratio = parseInt(docs[0].gathertotalratio);<br>        gathertotalvalue = 10;</p>
-<pre><code>    <span class="comment">// update to the DB</span>
-    sales.update({<span class="string">"ctrctId"</span> : id}, 
-        {$push:{<span class="string">"gather"</span>:{
-                <span class="string">"gathervalue"</span>:gathervalue,
-                <span class="string">"gatherratio"</span>:gatherratio,
-                <span class="string">"gathertime"</span>:gathertime,
-            }}},
-        <span class="function"><span class="keyword">function</span> <span class="params">(err, doc)</span> </span>{
-        <span class="keyword">if</span> (err) {
-            <span class="comment">// If it failed, return error</span>
-            res.send(<span class="string">"There was a problem adding the information to the database."</span>);
-            <span class="keyword">return</span>;
-        }
-        <span class="keyword">else</span> {
-
-        }
-    });
-
-    gathertotalvalue = <span class="built_in">parseInt</span>(gathervalue) + gathertotalvalue;
-    gathertotalratio = <span class="built_in">parseInt</span>(gatherratio) + gathertotalratio;
-
-    <span class="comment">//update   billtotalvalue  and billtotalratio tp db</span>
-    sales.update({<span class="string">"ctrctId"</span> : id}, 
-        {$set:{<span class="string">"gathertotalvalue"</span>:gathertotalvalue,<span class="string">"gathertotalratio"</span>:gathertotalratio}},
-        <span class="function"><span class="keyword">function</span> <span class="params">(err, doc)</span> </span>{
-        <span class="keyword">if</span> (err) {
-            <span class="comment">// If it failed, return error</span>
-            res.send(<span class="string">"There was a problem adding the information to the database."</span>);
-            <span class="keyword">return</span>;
-        }
-        <span class="keyword">else</span> {
-            <span class="comment">// And forward to success page</span>
-            res.redirect(<span class="string">"contractdetail?id="</span>+id);
-        }
-    });
-
-});
-</code></pre><hr>
-<p>table中放入元素时，必须是嵌套在tr的td标签中的， 否则布局会受影响</p>
-<p>login保存在session里面</p>
-<p>搜索需要正则表达式<br>var pattern = new RegExp(“^.<em>“+str+”.</em>$”);</p>
-<p><input type="" required="required" name="" id="" value=""><br>加上required 这个属性 ，就成了必填字段 。</p>
-<p>db.collections.find({‘$where’: “this.x &gt; this.y”}, {‘name’: 1})</p>
-<p>中文字符转换，并且解决参数传递乱码问题,并且防止非法字符（&amp;）等：<br>传递前参数前面加上函数encodeURIComponent（），<br>解码的时候：decodeURIComponent（）</p>
-<p>文件上传<br>Npm install connect-multiparty</p>
-<p>//form表单需要的中间件。<br>var mutipart= require(‘connect-multiparty’);</p>
-<p>var mutipartMiddeware = mutipart();</p>
-<p>npm install node-xlsx</p>
-<p>xls转json(解析XLS文件)<br>var xlsx = require(“node-xlsx”);<br>var fs = require(‘fs’);<br>var list = xlsx.parse(“Camp.xlsx”);<br>//console.log(JSON.stringify(list));<br>这个list其实是数组，数组的使用方法：<br>function praseExcel(list)<br>{<br>    console.log(“qqq”);<br>    for (var i = 0; i &lt; list.length; i++)<br>    {<br>         var excleData = list[i].data;<br>         var sheetArray  = [];<br>         var typeArray =  excleData[1];<br>         var keyArray =  excleData[2];<br>        for (var j = 3; j &lt; excleData.length ; j++)<br>        {<br>             var curData = excleData[j];<br>             if(curData.length == 0) continue;<br>             var item = changeObj(curData,typeArray,keyArray);<br>             sheetArray.push(item);<br>        }<br>        if(sheetArray.length &gt;0)<br>        writeFile(list[i].name+”.json”,JSON.stringify(sheetArray));<br>    }<br>   console.log(“qqq”);<br>}</p>
-<p>上传文件参考：<br><a href="http://developer.51cto.com/art/201611/520835.htm?pc" target="_blank" rel="external">http://developer.51cto.com/art/201611/520835.htm?pc</a></p>
-<p>日期格式转换：<br>npm install moment —save<br>var date = new Date(1900, 0, list[0].data[i][4]-1);<br>var date1=moment(date).format(“YYYY/MM/DD”);<br>console.log(date1);</p>
-<p>pushAll的时候，后面条件用数组[]。而不需要用数组转换以后的Json格式。</p>
-<p>查询里面的某一个数组<br>sales.find({“attach.filename” : name},{“attach.originalname.$”:1},function(e,docs){</p>
-<p>form表单里面有file的时候，必须要有enctype=”multipart/form-data”这个选项，如果没有file的时候，则不需要，否则可能出错</p>
-<p>删除按钮的实现</p>
-<p><form name="form1" method="post" action="xxx.htm" onsubmit="javascript:return window.confirm('确认提交吗？')"><br>                    <input type="submit" value="删除"></form></p>
-<p>更新时候，更新某个具体的数组的操作，用到￥<br>var sales = db.get(‘salescontract’);<br>    sales.update({“ctrctId” : ctrctId,”purchase.purchsId”:purchsId},<br>        {$set:{<br>            “purchase.$.purchsValue” : purchsValue,<br>            “purchase.$.purchsTime” : purchsTime,<br>            “purchase.$.purchsBrief” : purchsBrief,<br>            }},<br>         function (err, doc) {<br>            if (err) {<br>                // If it failed, return error<br>                res.send(“There was a problem update the information to the database  bb.”);<br>                return;<br>            }<br>            else {<br>                // And forward to success page<br>                res.redirect(“contractdetail?id=”+ctrctId);<br>            }<br>        });</p>
-<p>变更数组的时候，要指定哪一个。<br>比如 下面的0<br>{$set:{<br>                        “sales.0.ctrctBrief”:ctrctBrief,<br>                    }}</p>
-<p>如果变更不存在，增加一个的话就用upset<br>purchase.update({“purchsId” : docs[0].purchase[i].purchsId},<br>                    {$set:{<br>                        “sales.0.ctrctBrief”:ctrctBrief,<br>                    }},{upsert: true},<br>                    function(error, result){<br>                    if (error) {<br>                      console.log(‘update salse and purchase Error:’+ error);<br>                    }else{<br>                    }<br>                });</p>
-<p>函数传递参数的时候，参数后面如果有空格的话，会丢掉，导致传递的参数和以前的值不一致，一个有空格，一个没有空格，为了避免这种情况一开始得到值的时候，就把后面的空格去掉，用replace函数。<br>var purchsId = purchsId1.replace(/(^\s<em>)|(\s</em>$)/g, “”);</p>
-<p>MongoDB想用动态变量下标来删除或更新数组的时候，基本上不可能，可以用该动态变量下标，来查找到这个数组的所有内容，然后用所有内容作为关键字，来进行变更和删除</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/08/-nodejs随笔/" data-id="xrw5d6c3ugi1lo8k" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs-express-mongodb/">nodejs express mongodb</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
 </article>
-
-
   
   
+    </div></section>
+  
+
 </section>
         
           <aside id="sidebar">
   
     
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs-express-mongodb/">nodejs express mongodb</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Monk/">Monk</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nodejs/">Nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs-express-mongodb/">nodejs express mongodb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sublime-Text/">sublime Text</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开始/">开始</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/感想/">感想</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排序/">排序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网站/">网站</a></li></ul>
     </div>
   </div>
+
 
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/nodejs-express-mongodb/" style="font-size: NaNpx;">nodejs express mongodb</a>
+      <a href="/tags/Monk/" style="font-size: 10px;">Monk</a> <a href="/tags/Nodejs/" style="font-size: 10px;">Nodejs</a> <a href="/tags/nodejs-express-mongodb/" style="font-size: 10px;">nodejs express mongodb</a> <a href="/tags/sublime-Text/" style="font-size: 10px;">sublime Text</a> <a href="/tags/开始/" style="font-size: 10px;">开始</a> <a href="/tags/感想/" style="font-size: 10px;">感想</a> <a href="/tags/排序/" style="font-size: 10px;">排序</a> <a href="/tags/网站/" style="font-size: 10px;">网站</a>
     </div>
   </div>
 
@@ -223,19 +124,20 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a></li></ul>
     </div>
   </div>
+
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2018/07/10/排序/">(no title)</a>
+            <a href="/2018/07/10/排序/">monogodb 排序</a>
           </li>
         
           <li>
@@ -243,11 +145,11 @@
           </li>
         
           <li>
-            <a href="/2014/12/28/构建网站/">(no title)</a>
+            <a href="/2014/12/26/构建网站/">构建网站感想</a>
           </li>
         
           <li>
-            <a href="/2014/12/26/开始/">(no title)</a>
+            <a href="/2014/12/26/开始/">开始&amp;sublimeText</a>
           </li>
         
       </ul>
@@ -262,7 +164,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2018 John Doe<br>
+      &copy; 2018 Hou dejun<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
@@ -280,14 +182,11 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
-
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js" type="text/javascript"></script>
-
+<script src="/js/script.js"></script>
 
   </div>
 </body>
