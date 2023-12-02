@@ -1,2 +1,2 @@
 # home
-the URL of my blog is http://djhoo.github.io
+the URL of my blog is http://houdejun.me
