@@ -3,15 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2018/9 | 日参省乎己</title>
+  <title>日参省乎己</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="title: “ENI/ESI学习心得”date: 2023-12-03 18:23:59tags:  Ethercatcomments: true #开启文章评论  1，概念ENI：ethercat   infromation，是一个XML描述文件 ESI:   ethercat slave information，是一个XML描述文件 系统商：Ethcat主站提供商，我们公司就是国讯芯微 从站">
+<meta property="og:type" content="article">
 <meta property="og:title" content="日参省乎己">
-<meta property="og:url" content="http://yoursite.com/archives/2018/09/index.html">
+<meta property="og:url" content="http://yoursite.com/2023/12/02/ENIESI学习心得/index.html">
 <meta property="og:site_name" content="日参省乎己">
+<meta property="og:description" content="title: “ENI/ESI学习心得”date: 2023-12-03 18:23:59tags:  Ethercatcomments: true #开启文章评论  1，概念ENI：ethercat   infromation，是一个XML描述文件 ESI:   ethercat slave information，是一个XML描述文件 系统商：Ethcat主站提供商，我们公司就是国讯芯微 从站">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2023-12-02T13:04:34.422Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="日参省乎己">
+<meta name="twitter:description" content="title: “ENI/ESI学习心得”date: 2023-12-03 18:23:59tags:  Ethercatcomments: true #开启文章评论  1，概念ENI：ethercat   infromation，是一个XML描述文件 ESI:   ethercat slave information，是一个XML描述文件 系统商：Ethcat主站提供商，我们公司就是国讯芯微 从站">
   
     <link rel="alternate" href="/atom.xml" title="日参省乎己" type="application/atom+xml">
   
@@ -60,77 +64,55 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/09/10/C#调用 C和C++dll的方法/" class="archive-article-date">
-  <time datetime="2018-09-10T10:23:59.000Z" itemprop="datePublished">Sep 10</time>
+        <section id="main"><article id="post-ENIESI学习心得" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/12/02/ENIESI学习心得/" class="article-date">
+  <time datetime="2023-12-02T13:03:35.055Z" itemprop="datePublished">2023-12-02</time>
 </a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/10/C#调用 C和C++dll的方法/">C#调用 C/C++dll的方法：</a>
-    </h1>
-  
-
-    </header>
+    
   </div>
-</article>
-  
+  <div class="article-inner">
     
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/09/10/传感器/" class="archive-article-date">
-  <time datetime="2018-09-10T10:23:59.000Z" itemprop="datePublished">Sep 10</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/10/传感器/">传感器的考虑</a>
-    </h1>
-  
+        <p>title: “ENI/ESI学习心得”<br>date: 2023-12-03 18:23:59<br>tags:</p>
+<ul>
+<li>Ethercat<br>comments: true #开启文章评论</li>
+</ul>
+<p>1，概念<br>ENI：ethercat   infromation，是一个XML描述文件</p>
+<p>ESI:   ethercat slave information，是一个XML描述文件</p>
+<p>系统商：Ethcat主站提供商，我们公司就是国讯芯微</p>
+<p>从站厂商：主要是  伺服从站， 驱动器，远程IO，</p>
+<p>ESI：是由从站厂商自己提供的，根据他们自己的驱动器，来编写的ESI文件，里面记录这些驱动器的信息。</p>
+<p>ENI：由系统商根据，从站产商提供的ESI文件，以及固定的几个从站，来生成的一个描述主站和从站信息的文件，但是如果从站发生了变化，这个ENI文件不变的话，就会产生问题，</p>
+<p>所以，现在有另外一中只用ESI文件，然后通过系统商的API来读取这个网络里面的信息，可以获取这个Ethercat网络里面的从站信息。</p>
+<p>可以设定Ethercat网络的 轮询时间，这个时间，决定了整个NC的计算时间，因为这个时间去控制伺服电机的时间。</p>
+<p>2，关于参考点建立</p>
+<p>基本上产商的驱动器+伺服电机 是一一对应的，如果建立参考点(是无挡块的)，也就是把当前的伺服电机的坐标设为0，系统商提供读写从站厂商的驱动器的信息的API。 首先，从ESI文件里面得到设定坐标为0的 寄存器地址。然后，用API把该地址的值设定为0，或者1.</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/09/06/项目问题总结/" class="archive-article-date">
-  <time datetime="2018-09-06T10:23:59.000Z" itemprop="datePublished">Sep 6</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/06/项目问题总结/">项目问题总结</a>
-    </h1>
-  
-
-    </header>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2023/12/02/ENIESI学习心得/" data-id="clpo2jpp60000u0ccek1jcl6v" class="article-share-link">Share</a>
+      
+      
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2023/12/02/Lambda表达式/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
